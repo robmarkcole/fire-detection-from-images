@@ -7,6 +7,7 @@ Detect fire in images using neural nets
 * [fire-detect-yolov4](https://github.com/gengyanlei/fire-detect-yolov4) - training of Yolo v4 model
 * [midasklr/FireSmokeDetectionByEfficientNet](https://github.com/midasklr/FireSmokeDetectionByEfficientNet) - Fire and smoke classification and detection using efficientnet, pytorch, visualizes the activation map
 * [arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection) - A Specialized Lightweight Fire & Smoke Detection Model for Real-Time IoT Applications (e.g. on RPi), accuracy approx. 95%. Paper https://arxiv.org/abs/1905.11922v2
+* [tobybreckon/fire-detection-cnn](https://github.com/tobybreckon/fire-detection-cnn) - links to a couple of datasets
 
 ## Datasets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 images with bounding boxes
@@ -14,3 +15,6 @@ Detect fire in images using neural nets
 * [mivia Fire Detection Dataset](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/) - approx. 30 videos
 * [USTC smoke detection](http://smoke.ustc.edu.cn/datasets.htm) - links to various sources that provide videos of smoke
 * fire/not-fire dataset in the pyimagesearch article. Note that there are many umages of fire scenes that do not contain actual fire, but burnt out homes for example 
+
+## Comments
+* firenet is a VERY common name for model, do not use
