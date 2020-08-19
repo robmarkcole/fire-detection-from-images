@@ -10,4 +10,4 @@ Detect fire in images using neural nets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 images with bounding boxes
 * [cair/Fire-Detection-Image-Dataset](https://github.com/cair/Fire-Detection-Image-Dataset) - This dataset contains normal images and images with fire, and is highly unbalanced to reciprocate real world situations.
 * [USTC smoke detection](http://smoke.ustc.edu.cn/datasets.htm) - links to various sources that provide videos of smoke
-* fire/not-fire dataset in the pyimagesearch article
+* fire/not-fire dataset in the pyimagesearch article. Note that there are many umages of fire scenes that do not contain actual fire, but burnt out homes for example 
