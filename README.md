@@ -1,14 +1,14 @@
 # fire-detection-from-images
 Detect fire in images using neural nets.
 
-The purpose of this repo is to first identify relevant datasets and publications, then demonstrate a state of the art fire detection model published alongside the dataset.
+The purpose of this repo is to first identify relevant datasets and publications, then demonstrate a state of the art fire detection model that can be deployed to an edge device. Explore speed/accuracy tradeoffs & determine practical solution to deployment. Biggest challenge appears to be gathering comprehensive yet representative training dataset.
 
 ## Tooling and approach
-* Frames will be fed through a binary fire/normal classifier. On positive detecion of fire frames are fed to an object detection model to determine size/severity of the fire.
+* Frames will be fed through a fire/smoke/normal classifier. On positive detecion of fire/smoke frames are fed to an object detection model to determine the size/severity of the fire.
 * Remain open to pytorch & tensorflow2
-* Use google Colab for training
-* Host images on Google drive which has a nice UI, desktop apps with sync, easy auth in colab notebooks.
-* Additionally use kaggle for training and data hosting? Not personally a fan of the kaggle UI
+* Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth
+* Additionally use kaggle for training and data hosting? Not personally a fan of the kaggle UI, but keeping everything on kaggle simplifies auth, integration, version control, reproducibility
+* Identify any relevant guidance/legislation on required accuracy of fire detection techniques
 
 ## Articles & repos
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
