@@ -1,13 +1,14 @@
 # fire-detection-from-images
 Detect fire in images using neural nets.
 
-The purpose of this repo is to first identify relevant datasets and publications, then demonstrate a state of the art fire detection model that can be deployed to an edge device. Explore speed/accuracy tradeoffs & determine practical solution to deployment. Biggest challenge appears to be gathering comprehensive yet representative training dataset.
+The purpose of this repo is to first identify relevant datasets and publications, then demonstrate a state of the art fire detection model that can be deployed to an edge device, presumed to be connected to a CCTV camera. Explore speed/accuracy tradeoffs & determine practical solution to deployment.
+
+Biggest challenge appears to be gathering comprehensive yet representative training dataset. Do we need different datasets for small/large/indoor/outdoor fires? What is the highest accuracy achievable? Explore custom architectures or focus on fine tuning?
 
 ## Tooling and approach
 * Frames will be fed through a fire/normal classifier. On positive detection of fire frames are fed to an object detection model to determine the size/severity of the fire. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
 * Remain open to pytorch & tensorflow2
-* Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth
-* Additionally use kaggle for training and data hosting? Not personally a fan of the kaggle UI, but keeping everything on kaggle simplifies auth, integration, version control, reproducibility
+* Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth. Additionally or alternatively use kaggle, any particular advantages vs colab?
 * Identify any relevant guidance/legislation on required accuracy of fire detection techniques
 
 ## Articles & repos
@@ -21,13 +22,13 @@ The purpose of this repo is to first identify relevant datasets and publications
 * [Fire Detection using CCTV images — Monk Library Application](https://medium.com/towards-artificial-intelligence/fire-detection-using-cctv-images-monk-library-application-242df1fca2b9) - keras classifier on kaggle datasets, mobilenet-v2, densenet121 and densenet201
 
 ## Datasets
-* [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 images with bounding boxes
+* [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes
+* [Fire Detection from CCTV on Kaggle](https://www.kaggle.com/ritupande/fire-detection-from-cctv) - images and video, images are extracted from video, relatively small dataset. Quite relevant to current task as have videos to test on.
 * [cair/Fire-Detection-Image-Dataset](https://github.com/cair/Fire-Detection-Image-Dataset) - This dataset contains normal images and images with fire, and is highly unbalanced to reciprocate real world situations.
 * [mivia Fire Detection Dataset](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/) - approx. 30 videos
 * [USTC smoke detection](http://smoke.ustc.edu.cn/datasets.htm) - links to various sources that provide videos of smoke
-* fire/not-fire dataset in the pyimagesearch article. Note that there are many umages of fire scenes that do not contain actual fire, but burnt out homes for example 
-* [Fire Detection from CCTV on Kaggle](https://www.kaggle.com/ritupande/fire-detection-from-cctv) - images and video
-* [FIRE Dataset on Kaggle]() - 755 outdoor-fire images and 244 non-fire images 
+* fire/not-fire dataset in the pyimagesearch article can be downloaded. Note that there are many images of fire scenes that do not contain actual fire, but burnt out homes for example.
+* [FIRE Dataset on Kaggle](https://www.kaggle.com/phylake1337/fire-dataset) - 755 outdoor fire images and 244 non-fire images. Many glossy images, representative?
 
 ## Comments
 * firenet is a VERY common name for model, do not use

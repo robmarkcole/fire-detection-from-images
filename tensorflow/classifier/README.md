@@ -1,4 +1,5 @@
 ## Classification with tensorflow
 * Fine tuning of ResNet50 on kaggle dataset using Monk, final accuracy around 95%, notebook `Classifier_Monk_Fire_presence_recognition_in_cctv_images.ipynb`
-* [pyimagesearch Fire and smoke detection with Keras and Deep Learning](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - well explained sequential model trained from scratch called FireDetectionNet, 92% accuracy. Uses glossy images of fires and nature, not really representative of what we expect in practice.
+* [pyimagesearch Fire and smoke detection with Keras and Deep Learning](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - well explained sequential model trained from scratch called FireDetectionNet, 92% accuracy. Uses glossy images of fires and nature, not really representative of what we expect in practice. Implements learning rate finder adopted by fastai
+* https://www.kaggle.com/delllectron/fire-detection-computer-vision - kaggle notebook on FIRE dataset
 * [https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/](https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/) - keras docs, efficientnet classifier transfer learning, 120 dog breeds example.
