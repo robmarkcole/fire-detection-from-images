@@ -1,0 +1,3 @@
+## Classification with tensorflow
+* [https://www.kaggle.com/ritupande/fire-and-smoke-detection-in-cctv-footage](https://www.kaggle.com/ritupande/fire-and-smoke-detection-in-cctv-footage) - fine tuning of ResNet50
+* [https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/](https://keras.io/examples/vision/image_classification_efficientnet_fine_tuning/) - keras docs, efficientnet classifiertransfer learning, 120 dog breeds example

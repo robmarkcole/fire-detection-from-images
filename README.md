@@ -1,7 +1,14 @@
 # fire-detection-from-images
 Detect fire in images using neural nets.
 
-The purpose of this repo is to first identify relevant datasets and publications, then demonstrate a state of the art model published alongside the dataset.
+The purpose of this repo is to first identify relevant datasets and publications, then demonstrate a state of the art fire detection model published alongside the dataset.
+
+## Tooling and approach
+* Frames will be fed through a binary fire/normal classifier. On positive detecion of fire frames are fed to an object detection model to determine size/severity of the fire.
+* Remain open to pytorch & tensorflow2
+* Use google Colab for training
+* Host images on Google drive which has a nice UI, desktop apps with sync, easy auth in colab notebooks.
+* Additionally use kaggle for training and data hosting? Not personally a fan of the kaggle UI
 
 ## Articles & repos
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
@@ -11,7 +18,7 @@ The purpose of this repo is to first identify relevant datasets and publications
 * [arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection) - A Specialized Lightweight Fire & Smoke Detection Model for Real-Time IoT Applications (e.g. on RPi), accuracy approx. 95%. Paper https://arxiv.org/abs/1905.11922v2
 * [tobybreckon/fire-detection-cnn](https://github.com/tobybreckon/fire-detection-cnn) - links to a couple of datasets
 * [EmergencyNet](https://github.com/ckyrkou/EmergencyNet) - identify fire and other emergencies from a drone
-* [Fire Detection using CCTV images — Monk Library Application](https://medium.com/towards-artificial-intelligence/fire-detection-using-cctv-images-monk-library-application-242df1fca2b9) - keras classifier on kaggle datasets,  handy [notebook](https://github.com/Tessellate-Imaging/monk_v1/blob/master/study_roadmaps/4_image_classification_zoo/Classifier%20-%20Fire%20presence%20recognition%20in%20cctv-images.ipynb)
+* [Fire Detection using CCTV images — Monk Library Application](https://medium.com/towards-artificial-intelligence/fire-detection-using-cctv-images-monk-library-application-242df1fca2b9) - keras classifier on kaggle datasets, mobilenet-v2, densenet121 and densenet201
 
 ## Datasets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 images with bounding boxes
