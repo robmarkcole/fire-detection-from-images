@@ -1,9 +1,12 @@
 # fire-detection-from-images
-Detect fire in images using neural nets.
+The purpose of this repo is to demonstrate a fire detection neural nets model that can be deployed to an edge device, presumed to be connected to a CCTV camera.
 
-The purpose of this repo is to first identify relevant datasets and publications, then demonstrate a state of the art fire detection model that can be deployed to an edge device, presumed to be connected to a CCTV camera. Explore speed/accuracy tradeoffs & determine practical solution to deployment.
+## Motivation and challenges
+Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are not suitable or effective in all conditions, in particular in large well ventilated spaces and at long distances. In these situations a camera solution might complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location or a fire. Particular scenarios I am interested in are: outdoors, garages and outbuildings, shared communal areas where fires might already be present, e.g for cooking.
 
-Biggest challenge appears to be gathering comprehensive yet representative training dataset. Do we need different datasets for small/large/indoor/outdoor fires? What is the highest accuracy achievable? Explore custom architectures or focus on fine tuning?
+There are a couple of significant challenges:
+* Gathering or locating a comprehensive, representative and balanced training dataset. The dataset should cover small/large/indoor/outdoor fires, at different viewpoints, for different camera manufacturers and settings, and under different lighting conditions.
+* Since we expect the model will have limitations, how do we make the model results interpretable?
 
 ## Tooling and approach
 * Frames will be fed through a fire/normal classifier. On positive detection of fire frames are fed to an object detection model to determine the size/severity of the fire. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
