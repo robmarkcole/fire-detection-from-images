@@ -6,7 +6,14 @@ Traditional smoke detectors work by [detecting the physical presence of smoke pa
 
 There are a couple of significant challenges:
 * Gathering or locating a comprehensive, representative and balanced training dataset. The dataset should cover small/large/indoor/outdoor fires, at different viewpoints, for different camera manufacturers and settings, and under different lighting conditions.
+* Since fires are so bright then can often wash out images and cause other optical disturbances
 * Since we expect the model will have limitations, how do we make the model results interpretable?
+
+Ideas:
+* Preprocessing images, e.g. to remove background or apply filters
+* Classifying short sequences of video, since the movement of fire is quite characteristic
+* Simulated data, identify any software which can generate realistic fires and add to existing datasets
+* Augmentations to simulate effect of different cameras and exposure settings
 
 ## Tooling and approach
 * Frames will be fed through a fire/normal classifier. On positive detection of fire frames are fed to an object detection model to determine the size/severity of the fire. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
