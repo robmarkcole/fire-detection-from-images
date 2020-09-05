@@ -1,12 +1,14 @@
 # fire-detection-from-images
-The purpose of this repo is to demonstrate a fire detection neural nets model that can be deployed to an edge device, presumed to be connected to a CCTV camera.
+The purpose of this repo is to demonstrate a fire detection neural nets model that can be deployed to an edge device, presumed to be connected to a camera that might be in a fixed location or on a roving drone.
 
 ## Motivation and challenges
-Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are not suitable or effective in all conditions, in particular in large well ventilated spaces and at long distances. In these situations a camera solution might complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location or a fire. Particular scenarios I am interested in are: outdoors, garages and outbuildings, shared communal areas where fires might already be present, e.g for cooking.
+Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location or a fire. Additionally with the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
-There are a couple of significant challenges:
-* Gathering or locating a comprehensive, representative and balanced training dataset. The dataset should cover small/large/indoor/outdoor fires, at different viewpoints, for different camera manufacturers and settings, and under different lighting conditions.
+There are a couple of significant challenges & open questions:
+* Gathering or locating a comprehensive, representative and balanced training dataset
+* Handling different viewpoints,  different camera manufacturers and settings, and different ambient lighting conditions.
 * Since fires are so bright then can often wash out images and cause other optical disturbances
+* Is a single 'super' model preferable, or many more specialised models?
 * Since we expect the model will have limitations, how do we make the model results interpretable?
 
 Ideas:
@@ -40,5 +42,8 @@ Ideas:
 * fire/not-fire dataset in the pyimagesearch article can be downloaded. Note that there are many images of fire scenes that do not contain actual fire, but burnt out homes for example.
 * [FIRE Dataset on Kaggle](https://www.kaggle.com/phylake1337/fire-dataset) - 755 outdoor fire images and 244 non-fire images. Many glossy images, representative?
 
+## Fire safety references
+* Locate reference covering the different kinds of fires in the home, common scenarios & interventions
+
 ## Comments
-* firenet is a VERY common name for model, do not use
+* Firenet is a VERY common name for model, do not use
