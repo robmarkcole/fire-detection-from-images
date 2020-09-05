@@ -2,7 +2,7 @@
 The purpose of this repo is to demonstrate a fire detection neural nets model that can be deployed to an edge device, presumed to be connected to a camera that might be in a fixed location or on a roving drone.
 
 ## Motivation and challenges
-Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location or a fire. Additionally with the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
+Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
 There are a couple of significant challenges & open questions:
 * Gathering or locating a comprehensive, representative and balanced training dataset
@@ -16,6 +16,7 @@ Ideas:
 * Classifying short sequences of video, since the movement of fire is quite characteristic
 * Simulated data, identify any software which can generate realistic fires and add to existing datasets
 * Augmentations to simulate effect of different cameras and exposure settings
+* Combining multiple signals & priors to improve [ROC characteristics](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
 
 ## Tooling and approach
 * Frames will be fed through a fire/normal classifier. On positive detection of fire frames are fed to an object detection model to determine the size/severity of the fire. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
@@ -44,6 +45,7 @@ Ideas:
 
 ## Fire safety references
 * Locate reference covering the different kinds of fires in the home, common scenarios & interventions
+* Safety/accuracy standards for fire detectors, including ROC characteristics
 
 ## Comments
 * Firenet is a VERY common name for model, do not use
