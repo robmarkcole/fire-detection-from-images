@@ -6,8 +6,8 @@ Traditional smoke detectors work by [detecting the physical presence of smoke pa
 
 There are a couple of significant challenges & open questions:
 * Gathering or locating a comprehensive, representative and balanced training dataset
-* Handling different viewpoints,  different camera manufacturers and settings, and different ambient lighting conditions.
-* Since fires are so bright then can often wash out images and cause other optical disturbances
+* Handling different viewpoints, different camera manufacturers and settings, and different ambient lighting conditions.
+* Since fires are so bright they can often wash out images and cause other optical disturbances, or use [water based](https://www.hackster.io/ben-eagan/fire-from-water-9e6ae4) fire simulators
 * Is a single 'super' model preferable, or many more specialised models?
 * Since we expect the model will have limitations, how do we make the model results interpretable?
 
@@ -19,8 +19,8 @@ Ideas:
 * Combining multiple signals & priors to improve [ROC characteristics](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
 
 ## Tooling and approach
-* Frames will be fed through a fire/normal classifier. On positive detection of fire frames are fed to an object detection model to determine the size/severity of the fire. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
-* Remain open to pytorch & tensorflow2
+* Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
+* Remain open to pytorch & tensorflow2. However for low cost solution probably tensorflow-lite should be used.
 * Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth. Additionally or alternatively use kaggle, any particular advantages vs colab?
 * Identify any relevant guidance/legislation on required accuracy of fire detection techniques
 
