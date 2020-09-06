@@ -16,13 +16,14 @@ Ideas:
 * Classifying short sequences of video, since the movement of fire is quite characteristic
 * Simulated data, identify any software which can generate realistic fires and add to existing datasets
 * Augmentations to simulate effect of different cameras and exposure settings
-* Combining multiple signals & priors to improve [ROC characteristics](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
+* Combining multiple signals including [thermal](http://www.nationalfirefighter.com/blog/Technological-Advances-A-Closer-Look-at-Thermal-Imaging) & priors to improve [ROC characteristics](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
 
 ## Tooling and approach
 * Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
 * Remain open to pytorch & tensorflow2. However for low cost solution probably tensorflow-lite should be used.
 * Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth. Additionally or alternatively use kaggle, any particular advantages vs colab?
 * Identify any relevant guidance/legislation on required accuracy of fire detection techniques
+* [Seek thermal camera addon](https://www.amazon.co.uk/Seek-Thermal-UT-EAA-Protective-Waterproof-Black/dp/B00Y2QO6N0?th=1) is relatively low cost and can be used for gathering [thermal dataset](https://public.roboflow.com/object-detection/thermal-dogs-and-people)
 
 ## Articles & repos
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
@@ -48,7 +49,7 @@ Ideas:
 * Safety/accuracy standards for fire detectors, including ROC characteristics
 
 ## Fires in the home
-* Common causes including cigarettes left smouldering, electrical failures, chip pan fires
+* Common causes including cigarettes left smouldering, candles, electrical failures, chip pan fires
 * A large number of factors affect the nature of the fire, primarily the fuel and oxygenation, but also where the fire is, middle of the room/against a wall, thermal capacity of a room, the walls, ambient temperature, humidity, contaminants on the material (dust, oil based products, emollients etc)
 * To put out a fire a number of retardants are considered - water (not on electrical or chip pan), foam, CO2, dry powder
 * In electrical fires the electricity supply should first be isolated
