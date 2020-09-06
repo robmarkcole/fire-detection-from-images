@@ -47,5 +47,14 @@ Ideas:
 * Locate reference covering the different kinds of fires in the home, common scenarios & interventions
 * Safety/accuracy standards for fire detectors, including ROC characteristics
 
+## Fires in the home
+* Common causes including cigarettes left smouldering, electrical failures, chip pan fires
+* A large number of factors affect the nature of the fire, primarily the fuel and oxygenation, but also where the fire is, middle of the room/against a wall, thermal capacity of a room, the walls, ambient temperature, humidity, contaminants on the material (dust, oil based products, emollients etc)
+* To put out a fire a number of retardants are considered - water (not on electrical or chip pan), foam, CO2, dry powder
+* In electrical fires the electricity supply should first be isolated
+* Reducing ventillation, e.g. by closing doors, will limit fire
+* Smoke itself is a strong indicator of the nature of the fire
+* Read https://en.m.wikipedia.org/wiki/Fire_triangle and https://en.m.wikipedia.org/wiki/Combustion
+
 ## Comments
 * Firenet is a VERY common name for model, do not use
