@@ -34,6 +34,8 @@ Ideas:
 * [tobybreckon/fire-detection-cnn](https://github.com/tobybreckon/fire-detection-cnn) - links to a couple of datasets
 * [EmergencyNet](https://github.com/ckyrkou/EmergencyNet) - identify fire and other emergencies from a drone
 * [Fire Detection using CCTV images — Monk Library Application](https://medium.com/towards-artificial-intelligence/fire-detection-using-cctv-images-monk-library-application-242df1fca2b9) - keras classifier on kaggle datasets, mobilenet-v2, densenet121 and densenet201
+* [fire-detection-cnn](https://github.com/tobybreckon/fire-detection-cnn) - automatic detection of fire pixel regions in video (or still) imagery within real-time bounds. maximal accuracy of 0.93 for whole image binary fire detection (1), with 0.89 accuracy within our superpixel localization framework can be achieved
+* [Early Fire detection system using deep learning and OpenCV](https://towardsdatascience.com/early-fire-detection-system-using-deep-learning-and-opencv-6cb60260d54a) - customized InceptionV3 and CNN architectures for indoor and outdoor fire detection. 980 images for training and 239 images for validation, training accuracy of 98.04 and a validation accuracy of 96.43, openCV used for live detection on webcam - code and datasets (already referenced here) on https://github.com/jackfrost1411/fire-detection
 
 ## Datasets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes
@@ -43,6 +45,8 @@ Ideas:
 * [USTC smoke detection](http://smoke.ustc.edu.cn/datasets.htm) - links to various sources that provide videos of smoke
 * fire/not-fire dataset in the pyimagesearch article can be downloaded. Note that there are many images of fire scenes that do not contain actual fire, but burnt out homes for example.
 * [FIRE Dataset on Kaggle](https://www.kaggle.com/phylake1337/fire-dataset) - 755 outdoor fire images and 244 non-fire images. Many glossy images, representative?
+* [Fire Image Data Set for Dunnings 2018 study](https://collections.durham.ac.uk/files/r2d217qp536#.X2rv1ZNKidb) - PNG still image set
+* [Fire Superpixel Image Data Set for Samarth 2019 study](https://collections.durham.ac.uk/files/r10r967374q#.X2rv1pNKidb) - PNG still image set
 
 ## Fire safety references
 * Locate reference covering the different kinds of fires in the home, common scenarios & interventions
