@@ -5,10 +5,11 @@ The purpose of this repo is to demonstrate a fire detection neural net that can 
 Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
 There are a couple of significant challenges & open questions:
+* For fast edge model what is best architecture? Candidates include Yolov4-tiny/Yolov3, MobileNetSSDv2
 * Gathering or locating a comprehensive, representative and balanced training dataset
 * Handling different viewpoints, different camera manufacturers and settings, and different ambient lighting conditions.
-* Since fires are so bright they can often wash out images and cause other optical disturbances, or use [water based](https://www.hackster.io/ben-eagan/fire-from-water-9e6ae4) fire simulators
-* Is a single 'super' model preferable, or many more specialised models?
+* Since fires are so bright they can often wash out images and cause other optical disturbances, how can this be compensated for?
+* Is a single 'super' model preferable, or several specialised models? Typical categories of fire include candle flame, indoor/outdoor, vehicle
 * Since we expect the model will have limitations, how do we make the model results interpretable?
 
 Ideas:
@@ -21,7 +22,7 @@ Ideas:
 ## Tooling and approach
 * Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
 * Remain open to pytorch & tensorflow2. However for low cost solution probably tensorflow-lite should be used.
-* Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth. Additionally or alternatively use kaggle, any particular advantages vs colab?
+* Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth. Additionally or alternatively use kaggle, any particular advantages vs colab? [Roboflow](https://app.roboflow.com/) for image curation?
 * Identify any relevant guidance/legislation on required accuracy of fire detection techniques
 * [Seek thermal camera addon](https://www.amazon.co.uk/Seek-Thermal-UT-EAA-Protective-Waterproof-Black/dp/B00Y2QO6N0?th=1) is relatively low cost and can be used for gathering [thermal dataset](https://public.roboflow.com/object-detection/thermal-dogs-and-people)
 
@@ -29,7 +30,7 @@ Ideas:
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
 * [Fire Detection from scratch using YOLOv3](https://medium.com/@b117020/fire-detection-using-neural-networks-4d52c5cd55c5) - discusses annotation using LabelImg, using Google drive and Colab, deployment via Heroku and viz using Streamlit
 * [fire-detect-yolov4](https://github.com/gengyanlei/fire-detect-yolov4) - training of Yolo v4 model
-* [midasklr/FireSmokeDetectionByEfficientNet](https://github.com/midasklr/FireSmokeDetectionByEfficientNet) - Fire and smoke classification and detection using efficientnet, pytorch, visualizes the activation map
+* [midasklr/FireSmokeDetectionByEfficientNet](https://github.com/midasklr/FireSmokeDetectionByEfficientNet) - Fire and smoke classification and detection using efficientnet, Python 3.7、PyTorch1.3, visualizes the activation map, includes train and inference scripts
 * [arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection) - A Specialized Lightweight Fire & Smoke Detection Model for Real-Time IoT Applications (e.g. on RPi), accuracy approx. 95%. Paper https://arxiv.org/abs/1905.11922v2
 * [tobybreckon/fire-detection-cnn](https://github.com/tobybreckon/fire-detection-cnn) - links to a couple of datasets
 * [EmergencyNet](https://github.com/ckyrkou/EmergencyNet) - identify fire and other emergencies from a drone
@@ -38,7 +39,7 @@ Ideas:
 * [Early Fire detection system using deep learning and OpenCV](https://towardsdatascience.com/early-fire-detection-system-using-deep-learning-and-opencv-6cb60260d54a) - customized InceptionV3 and CNN architectures for indoor and outdoor fire detection. 980 images for training and 239 images for validation, training accuracy of 98.04 and a validation accuracy of 96.43, openCV used for live detection on webcam - code and datasets (already referenced here) on https://github.com/jackfrost1411/fire-detection
 
 ## Datasets
-* [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes
+* [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes. Repo contains trained Yolo3 model trained using [imageai](https://github.com/OlafenwaMoses/ImageAI), unknown performance.
 * [Fire Detection from CCTV on Kaggle](https://www.kaggle.com/ritupande/fire-detection-from-cctv) - images and video, images are extracted from video, relatively small dataset. Quite relevant to current task as have videos to test on.
 * [cair/Fire-Detection-Image-Dataset](https://github.com/cair/Fire-Detection-Image-Dataset) - This dataset contains normal images and images with fire, and is highly unbalanced to reciprocate real world situations.
 * [mivia Fire Detection Dataset](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/) - approx. 30 videos
@@ -60,6 +61,12 @@ Ideas:
 * Reducing ventillation, e.g. by closing doors, will limit fire
 * Smoke itself is a strong indicator of the nature of the fire
 * Read https://en.m.wikipedia.org/wiki/Fire_triangle and https://en.m.wikipedia.org/wiki/Combustion
+
+## Edge deployment
+Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) will influence decisions about architecture and other tradeoffs. 
+* [Deploy YOLOv5 to Jetson Xavier NX at 30FPS](https://blog.roboflow.com/deploy-yolov5-to-jetson-nx/) - 
+* [How to Train a Custom TensorFlow Lite Object Detection Model](https://blog.roboflow.com/how-to-train-a-tensorflow-lite-object-detection-model/) - colab notebook, MobileNetSSDv2, deploy to RPi
+* [How to Train a Custom Mobile Object Detection Model with YOLOv4 Tiny and TensorFlow Lite](https://blog.roboflow.com/how-to-train-a-custom-mobile-object-detection-model/) - train YOLOv4 tiny Darknet and convert to tflite, more steps than training straight for tflite
 
 ## Comments
 * Firenet is a VERY common name for model, do not use
