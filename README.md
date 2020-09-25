@@ -5,7 +5,7 @@ The purpose of this repo is to demonstrate a fire detection neural net that can 
 Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
 There are a couple of significant challenges & open questions:
-* For fast edge model what is best architecture? Candidates include Yolov4-tiny/Yolov3, MobileNetSSDv2
+* For fast edge model what is best architecture?
 * Gathering or locating a comprehensive, representative and balanced training dataset
 * Handling different viewpoints, different camera manufacturers and settings, and different ambient lighting conditions.
 * Since fires are so bright they can often wash out images and cause other optical disturbances, how can this be compensated for?
@@ -17,14 +17,12 @@ Ideas:
 * Classifying short sequences of video, since the movement of fire is quite characteristic
 * Simulated data, identify any software which can generate realistic fires and add to existing datasets
 * Augmentations to simulate effect of different cameras and exposure settings
-* Combining multiple signals including [thermal](http://www.nationalfirefighter.com/blog/Technological-Advances-A-Closer-Look-at-Thermal-Imaging) & priors to improve [ROC characteristics](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
 
 ## Tooling and approach
 * Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
-* Remain open to pytorch & tensorflow2. However for low cost solution probably tensorflow-lite should be used.
+* Develop a lower accuracy but fast model targeted at RPi and mobile, and a high accuracy model targeted at GPU devices like Jetson. Yolo present both options, yolo4 lite for mobile and yolo5 for GPU. Alternatively there is mobilenet and tf-object-detection-api
 * Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth. Additionally or alternatively use kaggle, any particular advantages vs colab? [Roboflow](https://app.roboflow.com/) for image curation?
 * Identify any relevant guidance/legislation on required accuracy of fire detection techniques
-* [Seek thermal camera addon](https://www.amazon.co.uk/Seek-Thermal-UT-EAA-Protective-Waterproof-Black/dp/B00Y2QO6N0?th=1) is relatively low cost and can be used for gathering [thermal dataset](https://public.roboflow.com/object-detection/thermal-dogs-and-people)
 
 ## Articles & repos
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
@@ -63,10 +61,10 @@ Ideas:
 * Read https://en.m.wikipedia.org/wiki/Fire_triangle and https://en.m.wikipedia.org/wiki/Combustion
 
 ## Edge deployment
-Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) will influence decisions about architecture and other tradeoffs. 
-* [Deploy YOLOv5 to Jetson Xavier NX at 30FPS](https://blog.roboflow.com/deploy-yolov5-to-jetson-nx/) - 
+Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) will influence decisions about architecture and other tradeoffs.
+* [Deploy YOLOv5 to Jetson Xavier NX at 30FPS](https://blog.roboflow.com/deploy-yolov5-to-jetson-nx/) - inference at 30 FPS
 * [How to Train a Custom TensorFlow Lite Object Detection Model](https://blog.roboflow.com/how-to-train-a-tensorflow-lite-object-detection-model/) - colab notebook, MobileNetSSDv2, deploy to RPi
-* [How to Train a Custom Mobile Object Detection Model with YOLOv4 Tiny and TensorFlow Lite](https://blog.roboflow.com/how-to-train-a-custom-mobile-object-detection-model/) - train YOLOv4 tiny Darknet and convert to tflite, more steps than training straight for tflite
+* [How to Train a Custom Mobile Object Detection Model with YOLOv4 Tiny and TensorFlow Lite](https://blog.roboflow.com/how-to-train-a-custom-mobile-object-detection-model/) - train YOLOv4 tiny Darknet and convert to tflite, demo on android, more steps than training straight for tflite
 
 ## Comments
 * Firenet is a VERY common name for model, do not use
