@@ -4,7 +4,7 @@
 * Tensorboard output (need to learn how to use)
 * Relies on training scripts, which are tedious to use and debug
 * Reported metrics are loss & DetectionBoxes_Precision/mAP
-* **Summary: using these scripts is painful and feels overcomplicated. Prefer to try yolo/pytorch**
+* **Summary: using these scripts is painful and use of tensorboard is overcomplicated. Tf1 is concern as means these will be updated. Failed to export tflite file which was main goal. Prefer to try yolo/pytorch next**
 
 ### Summary of steps
 * Install TensorFlow object detection library and dependencies
@@ -34,3 +34,4 @@ Completed after 35 mins with Loss for final step: 4.4343796:
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.074
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.506
  ```
+ Export to tflite failed, googling the error only returned an [unanswered stackoverflow](https://stackoverflow.com/questions/60475185/valueerror-invalid-tensors-normalized-input-image-tensor-were-found)
