@@ -1,15 +1,16 @@
 # fire-detection-from-images
-The purpose of this repo is to demonstrate a fire detection neural net that can be deployed to an edge device, presumed to be connected to a camera that might be in a fixed location or on a roving drone.
+The purpose of this repo is to demonstrate a fire detection neural net that can be deployed to an edge device, presumed to be connected to a camera that might be in a fixed location or on a roving drone e.g [Ring Always Home Cam](https://blog.ring.com/2020/09/24/introducing-ring-always-home-cam-an-innovative-new-approach-to-always-being-home/)
 
 ## Motivation and challenges
 Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
 There are a couple of significant challenges & open questions:
-* For fast edge model what is best architecture?
+* For fast edge model what is 'best' architecture?
+* Classifier, object detection, or both?
+* Is a single 'super' model preferable, or several specialised models? Typical categories of fire include candle flame, indoor/outdoor, vehicle
 * Gathering or locating a comprehensive, representative and balanced training dataset
 * Handling different viewpoints, different camera manufacturers and settings, and different ambient lighting conditions.
 * Since fires are so bright they can often wash out images and cause other optical disturbances, how can this be compensated for?
-* Is a single 'super' model preferable, or several specialised models? Typical categories of fire include candle flame, indoor/outdoor, vehicle
 * Since we expect the model will have limitations, how do we make the model results interpretable?
 
 Ideas:
@@ -17,12 +18,12 @@ Ideas:
 * Classifying short sequences of video, since the movement of fire is quite characteristic
 * Simulated data, identify any software which can generate realistic fires and add to existing datasets
 * Augmentations to simulate effect of different cameras and exposure settings
+* Identify any relevant guidance/legislation on required accuracy of fire detection techniques
 
-## Tooling and approach
+## Approach & Tooling
 * Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
 * Develop a lower accuracy but fast model targeted at RPi and mobile, and a high accuracy model targeted at GPU devices like Jetson. Yolo present both options, yolo4 lite for mobile and yolo5 for GPU. Alternatively there is mobilenet and tf-object-detection-api
-* Use Google Colab for training and host images on Google drive which has a nice UI, desktop apps with sync, easy auth. Additionally or alternatively use kaggle, any particular advantages vs colab? [Roboflow](https://app.roboflow.com/) for image curation?
-* Identify any relevant guidance/legislation on required accuracy of fire detection techniques
+* Use Google Colab for training and [Roboflow](https://app.roboflow.com/) for image dataset curation as allows easy export into common formats e.g. tfrecord
 
 ## Articles & repos
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
