@@ -7,6 +7,7 @@ Traditional smoke detectors work by [detecting the physical presence of smoke pa
 There are a couple of significant challenges & open questions:
 * For fast edge model what is 'best' architecture?
 * Classifier, object detection, or both?
+* Tensorflow + google ecosystem or Pytorch + NVIDIA/MS? Tensorflow suffers from tf1 legacy and overuse of scripts
 * Is a single 'super' model preferable, or several specialised models? Typical categories of fire include candle flame, indoor/outdoor, vehicle
 * Gathering or locating a comprehensive, representative and balanced training dataset
 * Handling different viewpoints, different camera manufacturers and settings, and different ambient lighting conditions.
