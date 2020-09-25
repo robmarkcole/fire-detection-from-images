@@ -24,7 +24,7 @@ Ideas:
 ## Approach & Tooling
 * Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
 * Develop a lower accuracy but fast model targeted at RPi and mobile, and a high accuracy model targeted at GPU devices like Jetson. Yolo present both options, yolo4 lite for mobile and yolo5 for GPU. Alternatively there is mobilenet and tf-object-detection-api. Higher accuracy GPU model is priority.
-* Use Google Colab for training and [Roboflow](https://app.roboflow.com/) for image dataset curation as allows easy export into common formats e.g. tfrecord
+* Use Google Colab for training and [Roboflow](https://app.roboflow.com/) for image dataset curation as allows easy export into common formats e.g. tfrecord. Once we get serious can use sagemaker or google equivalent, and [weights & biases](https://www.wandb.com/)
 * [LabelImg for Labeling](https://blog.roboflow.com/labelimg/)
 
 ## Articles & repos
