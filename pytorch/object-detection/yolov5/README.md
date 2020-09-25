@@ -10,3 +10,5 @@
 * Use notebook training defaults: `--img 416 --batch 16 --epochs 100`
 * Tesla K80, train time: 19min 31s
 * `mAP@.5` of 0.628, Precision of 0.299, recall of 0.775 - clearly room for improvement but have all the metrics to improve here
+* All metrics were improving so we can train for more epochs
+* Exported `best.pt` which [could be deployed to a jetson](https://blog.roboflow.com/deploy-yolov5-to-jetson-nx/)
