@@ -3,4 +3,5 @@
 * An awful lot of boilerplate!
 
 ## Experiment 1
-Notebook defaults
+Notebook defaults.
+Training taking a long time, much more so than yolov5

@@ -63,4 +63,4 @@
 </p>
 
 ## Summary
-Increasing batch size results in slower training, and too many epochs may result in overfitting (hard to be certain). We really want to use a dedicated tool to optimise these parameters, but in general the upper limit of `mAP@.5` is approx 0.63
+Increasing batch size results in slower training, and too many epochs may result in overfitting (hard to be certain). We really want to use a dedicated tool to optimise these parameters, but in general the upper limit of `mAP@.5` is approx 0.63. Worth looking at inference results to see if there are any obvious trends - e.g. poor detection on candle flames?
