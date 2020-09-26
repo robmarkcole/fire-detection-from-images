@@ -2,6 +2,7 @@
 * https://models.roboflow.com/object-detection/yolov4-pytorch
 * [opendatacam](https://github.com/opendatacam/opendatacam) uses yolov4
 * Training script authored by Tianxiaomo
+* Roboflow recommend skipping to yolov5
 
 ### Hyperparameters
 The training script exposes full range of hyperparameters:

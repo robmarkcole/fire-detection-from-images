@@ -5,9 +5,9 @@ The purpose of this repo is to demonstrate a fire detection neural net that can 
 Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
 There are a couple of significant challenges & open questions:
-* For fast edge model what is 'best' architecture? Yolo3 is very popular for commecrial applications and can be implemented in keras or pytorch, baseline [Yolov5](https://github.com/ultralytics/yolov5). 
+* For fast edge model what is 'best' architecture? Yolo3 is very popular for commecrial applications and can be implemented in keras or pytorch, baseline [Yolov5](https://github.com/ultralytics/yolov5) as it is currently SOTA and has deployment guide to Jetson. 
 * Can the architecture be optimised since we are detecting only a single class?
-* Baseline object detection, but is there benefit to classifier or using both?
+* Baseline object detection, but is there benefit to classifier or using both? Obj models train on mAP and Recall metrics but for our application bounding box accuracy may not be top priority, and we prefer binary fire/not-fire accuracy?
 * Tensorflow + google ecosystem or Pytorch + NVIDIA/MS? Tensorflow suffers from tf1 legacy
 * Is a single 'super' model preferable, or several specialised models? Typical categories of fire include candle flame, indoor/outdoor, vehicle
 * Gathering or locating a comprehensive, representative and balanced training dataset

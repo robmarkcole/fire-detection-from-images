@@ -35,3 +35,11 @@
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt3.png" width="700">
 </p>
+
+## Experiment 4
+* As expt3 but double epochs: `--batch 32 --epochs 1000`
+* `mAP@.5` of 0.607, Precision of 0.63, recall of 0.63 - vs expt3 precision has improved but other metrics are worse, clear overfitting. Optimum epochs around 150
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt4.png" width="700">
+</p>

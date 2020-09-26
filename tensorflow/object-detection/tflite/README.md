@@ -4,7 +4,7 @@
 * Tensorboard output (need to learn how to use)
 * Relies on training scripts, which are tedious to use and debug
 * Reported metrics are loss & DetectionBoxes_Precision/mAP
-* **Summary: using these scripts is painful and use of tensorboard is overcomplicated. Tf1 is concern as means these will be updated. Failed to export tflite file which was main goal. Prefer to try yolo/pytorch next**
+* **Summary: Tf1 is concern as means these will be updated. Failed to export tflite file which was main goal**
 
 ### Summary of steps
 * Install TensorFlow object detection library and dependencies
