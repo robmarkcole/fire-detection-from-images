@@ -6,6 +6,7 @@
 * Much nicer training and evaluation process than tensorflow obj det, also viz tensorboard in same notebook rather than seperate page
 * During training, you want to be watching the `mAP@0.5` to see how your detector is performing
 * Can plot multiple runs by renaming folders in `yolov5/runs`
+* Note on metrics reported below: the mAP etc reported are for the final batch, and subject to noise
 
 ## Experiment 1
 * Dataset: `FireNET  2020-07-30 7:23am`
@@ -53,5 +54,13 @@
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt5.png" width="700">
 </p>
 
+## Experiment 6
+* Try small batch size and limited epochs: `--batch 8 --epochs 200`
+* `mAP@.5` of 0.617, Precision of 0.4, recall of 0.768. Very comparable to expt1 & 2.
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt6.png" width="700">
+</p>
+
 ## Summary
-Increasing batch size results in slower optimisation, and too many epochs results in overfitting. We really want to use a dedicated tool to optimise these parameters
+Increasing batch size results in slower training, and too many epochs may result in overfitting (hard to be certain). We really want to use a dedicated tool to optimise these parameters, but in general the upper limit of `mAP@.5` is approx 0.63
