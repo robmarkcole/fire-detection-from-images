@@ -19,4 +19,12 @@
 
 ## Experiment 2
 * As expt1 but 500 epochs
-* Tesla P100-PCIE-16GB
+* Tesla P100-PCIE-16GB, train time: 33min 44s
+* `mAP@.5` of 0.588, Precision of 0.569, recall of 0.641 - vs expt1 precision has improved but recall and mAP have fallen. Appears mAP has plateaued whilst recall is falling.
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt2.png" width="700">
+</p>
+
+## Experiment 2
+* As expt2 but double batch size: `--batch 32 --epochs 500`
