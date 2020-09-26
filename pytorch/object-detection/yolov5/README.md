@@ -1,4 +1,4 @@
-## Yolov5 
+## Yolov5 pytorch
 * https://blog.roboflow.com/how-to-train-yolov5-on-a-custom-dataset/
 * Again uses training script, but it is very clear what parameters we are using
 * Optionally can edit the architecture
@@ -16,3 +16,7 @@
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt1.png" width="700">
 </p>
+
+## Experiment 2
+* As expt1 but 500 epochs
+* Tesla P100-PCIE-16GB
