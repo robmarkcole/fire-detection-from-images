@@ -43,3 +43,15 @@
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt4.png" width="700">
 </p>
+
+## Experiment 5
+* Increase batch and reduce epochs: `--batch 64 --epochs 150`
+* Slow training and poor results
+* `mAP@.5` of 0.462, Precision of 0.206, recall of 0.71
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt5.png" width="700">
+</p>
+
+## Summary
+Increasing batch size results in slower optimisation, and too many epochs results in overfitting. We really want to use a dedicated tool to optimise these parameters
