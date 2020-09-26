@@ -26,5 +26,10 @@
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt2.png" width="700">
 </p>
 
-## Experiment 2
+## Experiment 3
 * As expt2 but double batch size: `--batch 32 --epochs 500`
+*  `mAP@.5` of 0.633, Precision of 0.594, recall of 0.7 - vs expt2 all metrics have improved, larger batch size has paid off slightly, but comparison of graphs indicate it is a very small improvement
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt3.png" width="700">
+</p>
