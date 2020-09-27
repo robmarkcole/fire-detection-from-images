@@ -79,7 +79,9 @@ Increasing batch size results in slower training, and too many epochs may result
 
 ## Experiment 8
 * As expt7 but double epochs to 200
-* `mAP@.5` of 0.657, Precision of 0.6, recall of 0.7. mAP is slowly improving but recall slowly degrading. 
+* `mAP@.5` of 0.657, Precision of 0.6, recall of 0.7. mAP is slowly improving but recall slowly degrading.
 
 ## Experiment 9
 * As expt8 but increase epochs to 1000
+* 3 hrs
+* `mAP@.5` of 0.593, Precision of 0.728, recall of 0.58. Again more epochs improve precision but otherwise degrade the model.
