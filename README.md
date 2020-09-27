@@ -7,7 +7,7 @@ Traditional smoke detectors work by [detecting the physical presence of smoke pa
 There are a couple of significant challenges & open questions:
 * For fast edge model what is 'best' architecture? Yolo3 is very popular for commecrial applications and can be implemented in keras or pytorch, baseline [Yolov5](https://github.com/ultralytics/yolov5) as it is currently SOTA and has deployment guide to Jetson. 
 * Can the architecture be optimised since we are detecting only a single class?
-* Baseline object detection, but is there benefit to classifier or using both? Obj models train on mAP and Recall metrics but for our application bounding box accuracy may not be top priority, and we prefer binary fire/not-fire accuracy?
+* Baseline object detection, but is there benefit to classifier or using both? Obj models train on mAP and Recall metrics but for our application bounding box accuracy may not be top priority? However classification models work best on a nice shot containing only the target object but in real life fire scenarios the scene will not be as simple as this scenario.
 * Tensorflow + google ecosystem or Pytorch + NVIDIA/MS? Tensorflow suffers from tf1 legacy
 * Is a single 'super' model preferable, or several specialised models? Typical categories of fire include candle flame, indoor/outdoor, vehicle
 * Gathering or locating a comprehensive, representative and balanced training dataset
@@ -82,7 +82,10 @@ Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) 
 * [When to Use Grayscale as a Preprocessing Step](https://blog.roboflow.com/when-to-use-grayscale-as-a-preprocessing-step/)
 
 ## Metrics
-* mAP, IoU, precision and recall are all explained well [here](https://github.com/AlexeyAB/darknet#how-to-train-tiny-yolo-to-detect-your-custom-objects), and there is a [roboflow blog post here](https://blog.roboflow.com/using-computer-vision-to-count-fish-populations/)
+* mAP, IoU, precision and recall are all explained well [here](https://github.com/AlexeyAB/darknet#how-to-train-tiny-yolo-to-detect-your-custom-objects) and [here](https://github.com/jshaffer94247/Counting-Fish#Model-Metrics)
+* `mAP@0.5`: the mean Average Precision or correctness of each label taking into account all labels. `@0.5` sets a threshold for how much of the predicted bounding box overlaps the original annotation, i.e. "50% overlap"
+* `Precision` is the accuracy of the positive predictions `(TP / TP + FP)` or "If you say it's a fire, what percentage of the time is it really a fire?"
+* `Recall` is the true positive rate `(TP / TP + FN)` or "If there's a fire in there, what percentage of the time do you find it?"
 
 ## Comments
 * Firenet is a VERY common name for model, do not use

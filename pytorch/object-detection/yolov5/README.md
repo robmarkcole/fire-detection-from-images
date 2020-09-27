@@ -24,7 +24,7 @@
 ## Experiment 2
 * As expt1 but 500 epochs
 * Tesla P100-PCIE-16GB, train time: 33min 44s
-* `mAP@.5` of 0.588, Precision of 0.569, recall of 0.641 - vs expt1 precision has improved but recall and mAP have fallen. Appears mAP has plateaued whilst recall is falling. Probably overfitting after 150 epochs
+* `mAP@.5` of 0.588, Precision of 0.569, recall of 0.641 - vs expt1 precision has improved but recall and mAP have fallen. Appears mAP has plateaued whilst recall is falling.
 
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt2.png" width="700">
@@ -40,7 +40,7 @@
 
 ## Experiment 4
 * As expt3 but double epochs: `--batch 32 --epochs 1000`
-* `mAP@.5` of 0.607, Precision of 0.63, recall of 0.63 - vs expt3 precision has improved but other metrics are worse, clear overfitting. Optimum epochs around 150
+* `mAP@.5` of 0.607, Precision of 0.63, recall of 0.63 - vs expt3 precision has improved but other metrics are worse. Optimum epochs around 150
 
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt4.png" width="700">
@@ -49,7 +49,6 @@
 ## Experiment 5
 * Increase batch and reduce epochs: `--batch 64 --epochs 150`
 * Slow training and poor results
-* `mAP@.5` of 0.462, Precision of 0.206, recall of 0.71
 
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt5.png" width="700">
@@ -72,8 +71,15 @@ Increasing batch size results in slower training, and too many epochs may result
 * Apply grayscale to 25% images
 * Applying these augmentations generates dataset `FireNET  2020-09-27 8:09am`
 * Use notebook training defaults: `--img 416 --batch 16 --epochs 100`
-* * `mAP@.5` of 0.622, Precision of 0.533, recall of 0.688. Comparable results to experiment 1, indicating these augmentation steps did not improve accuracy much
+* `mAP@.5` of 0.622, Precision of 0.533, recall of 0.688. Comparable results to experiment 1 but with improved precision traded for recall and mAP, indicating these augmentation steps did change performance
 
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/dataset-expt7.png" width="1100">
 </p>
+
+## Experiment 8
+* As expt7 but double epochs to 200
+* `mAP@.5` of 0.657, Precision of 0.6, recall of 0.7. mAP is slowly improving but recall slowly degrading. 
+
+## Experiment 9
+* As expt8 but increase epochs to 1000
