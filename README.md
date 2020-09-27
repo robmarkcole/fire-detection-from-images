@@ -82,7 +82,7 @@ Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) 
 * [When to Use Grayscale as a Preprocessing Step](https://blog.roboflow.com/when-to-use-grayscale-as-a-preprocessing-step/)
 
 ## Metrics
-* mAP, IoU, precision and recall are all explained well [here](https://github.com/AlexeyAB/darknet#how-to-train-tiny-yolo-to-detect-your-custom-objects)
+* mAP, IoU, precision and recall are all explained well [here](https://github.com/AlexeyAB/darknet#how-to-train-tiny-yolo-to-detect-your-custom-objects), and there is a [roboflow blog post here](https://blog.roboflow.com/using-computer-vision-to-count-fish-populations/)
 
 ## Comments
 * Firenet is a VERY common name for model, do not use

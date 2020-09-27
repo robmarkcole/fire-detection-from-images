@@ -7,6 +7,7 @@
 * During training, you want to be watching the `mAP@0.5` to see how your detector is performing
 * Can plot multiple runs by renaming folders in `yolov5/runs`
 * Note on metrics reported below: the mAP etc reported are for the final batch, and subject to noise
+* Relevant [repo](https://github.com/jshaffer94247/Counting-Fish) and [article](https://blog.roboflow.com/using-computer-vision-to-count-fish-populations/) on counting fish with yolov5
 
 ## Experiment 1
 * Dataset: `FireNET  2020-07-30 7:23am`
@@ -71,7 +72,8 @@ Increasing batch size results in slower training, and too many epochs may result
 * Apply grayscale to 25% images
 * Applying these augmentations generates dataset `FireNET  2020-09-27 8:09am`
 * Use notebook training defaults: `--img 416 --batch 16 --epochs 100`
+* * `mAP@.5` of 0.622, Precision of 0.533, recall of 0.688. Comparable results to experiment 1, indicating these augmentation steps did not improve accuracy much
 
 <p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/dataset-expt7.png" width="900">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/dataset-expt7.png" width="1100">
 </p>
