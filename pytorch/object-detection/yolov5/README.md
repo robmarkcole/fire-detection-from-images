@@ -62,5 +62,16 @@
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/metrics-expt6.png" width="700">
 </p>
 
-## Summary
-Increasing batch size results in slower training, and too many epochs may result in overfitting (hard to be certain). We really want to use a dedicated tool to optimise these parameters, but in general the upper limit of `mAP@.5` is approx 0.63. Worth looking at inference results to see if there are any obvious trends - e.g. poor detection on candle flames?
+## Summary of experiments 1 - 6
+Increasing batch size results in slower training, and too many epochs may result in overfitting (hard to be certain). We really want to use a dedicated tool to optimise these parameters, but in general the upper limit of `mAP@.5` is approx 0.63. Worth looking at inference results to see if there are any obvious trends - e.g. poor detection on candle flames? Currently not using the test set. Next experiment with image augmentation.
+
+## Experiment 7
+* Apply -25% to + 25% brightness
+* Add 5% of pixels noise
+* Apply grayscale to 25% images
+* Applying these augmentations generates dataset `FireNET  2020-09-27 8:09am`
+* Use notebook training defaults: `--img 416 --batch 16 --epochs 100`
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/pytorch/object-detection/yolov5/experiment1/dataset-expt7.png" width="900">
+</p>
