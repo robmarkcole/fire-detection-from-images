@@ -71,8 +71,10 @@ Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) 
 * [Train YOLOv4-tiny on Custom Data - Lightning Fast Object Detection](https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/)
 * [How to Train a Custom TensorFlow Lite Object Detection Model](https://blog.roboflow.com/how-to-train-a-tensorflow-lite-object-detection-model/) - colab notebook, MobileNetSSDv2, deploy to RPi
 * [How to Train a Custom Mobile Object Detection Model with YOLOv4 Tiny and TensorFlow Lite](https://blog.roboflow.com/how-to-train-a-custom-mobile-object-detection-model/) - train YOLOv4 tiny Darknet and convert to tflite, demo on android, more steps than training straight for tflite
+* [AI for AG: Production machine learning for agriculture](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1) - complete workflow from training to deployment
 
 ## Image preprocessing and augmentation
+Roboflow allows up to 3 types of augmentation per dataset, in addition to basic cropping. If we want to experiment with more augmentations we can checkout https://imgaug.readthedocs.io/en/latest/
 * [Why Image Preprocessing and Augmentation Matters](https://blog.roboflow.com/why-preprocess-augment/)
 * [The Importance of Blur as an Image Augmentation Technique](https://blog.roboflow.com/using-blur-in-computer-vision-preprocessing/)
 * [When to Use Contrast as a Preprocessing Step](https://blog.roboflow.com/when-to-use-contrast-as-a-preprocessing-step/)
