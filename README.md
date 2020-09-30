@@ -6,7 +6,6 @@ The purpose of this repo is to demonstrate a fire detection neural net that can 
 
 **Classification:** I have yet to train my own model, but 95% accuracy is reported using the ResNet50 with the Monk tensorflow library.
 
-
 ## Motivation and challenges
 Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
@@ -98,3 +97,6 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 
 ## Comments
 * Firenet is a VERY common name for model, do not use
+
+## Discussion
+* [Thread I have started on the fast.ai forum](https://forums.fast.ai/t/yolo-v5-implementation-in-fastai2/79738)
