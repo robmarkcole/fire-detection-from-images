@@ -85,3 +85,6 @@ Increasing batch size results in slower training, and too many epochs may result
 * As expt8 but increase epochs to 1000
 * 3 hrs
 * `mAP@.5` of 0.593, Precision of 0.728, recall of 0.58. Again more epochs improve precision but otherwise degrade the model.
+
+## Final summary
+In general the upper limit of `mAP@.5` is approx 0.66, and there appears to be a tradeoff between Precision and Recall, possibly due to overfitting. The default training parameters in experiment 1 resulted in a pretty respectable model, but some tweaking of parameters and application of image augmentation did result in a slightly improved model in experiment 8. Further performance improvement could likely be achieved by increasing the size of the training dataset, further experimentation with image augmentation, and a more robust technique for optimising training parameters.
