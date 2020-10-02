@@ -8,6 +8,7 @@
 * Can plot multiple runs by renaming folders in `yolov5/runs`
 * Note on metrics reported below: the mAP etc reported are for the final batch, and subject to noise
 * Relevant [repo](https://github.com/jshaffer94247/Counting-Fish) and [article](https://blog.roboflow.com/using-computer-vision-to-count-fish-populations/) on counting fish with yolov5
+* All experiments done with [FireNET](https://github.com/OlafenwaMoses/FireNET) dataset loaded to RoboFlow
 
 ## Experiment 1
 * Dataset: `FireNET  2020-07-30 7:23am`
