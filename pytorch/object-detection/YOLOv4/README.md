@@ -16,3 +16,4 @@ The training script exposes full range of hyperparameters:
 
 ## Experiment 1
 * On running the training notebook  I hit error: `ValueError: invalid literal for int() with base 10: '(5)_jpg.rf.0197636708df2f500f855fc4776bfcdb.jpg'` have emailed support about this
+* Dont make further effort on v4
