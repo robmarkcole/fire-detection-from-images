@@ -79,6 +79,12 @@ Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) 
 * [How to Train a Custom Mobile Object Detection Model with YOLOv4 Tiny and TensorFlow Lite](https://blog.roboflow.com/how-to-train-a-custom-mobile-object-detection-model/) - train YOLOv4 tiny Darknet and convert to tflite, demo on android, more steps than training straight for tflite
 * [AI for AG: Production machine learning for agriculture](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1) - complete workflow from training to deployment
 
+## Cloud deployment
+We want a solution that could also be deployed to the cloud, with minimal changes vs the edge deployment. A couple of options:
+* [Deploy as a lambda function](https://towardsdatascience.com/scaling-machine-learning-from-zero-to-hero-d63796442526) - will memory be and performance issue? Scaling sorted.
+* Deploy on a VM with code to handle queuing of requests, e.g. [Deepstack](https://deepquestai.com/). Will scaling be an issue?
+* Use one of the cloud providers that host custom models, e.g. [AWS custom labels](https://aws.amazon.com/rekognition/custom-labels-features/). Dont know much about this approach, prefer vendor agnostic.
+
 ## Image preprocessing and augmentation
 Roboflow allows up to 3 types of augmentation per dataset, in addition to basic cropping. If we want to experiment with more augmentations we can checkout https://imgaug.readthedocs.io/en/latest/
 * [Why Image Preprocessing and Augmentation Matters](https://blog.roboflow.com/why-preprocess-augment/)
