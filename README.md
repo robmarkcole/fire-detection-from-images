@@ -84,6 +84,7 @@ We want a solution that could also be deployed to the cloud, with minimal change
 * [Deploy as a lambda function](https://towardsdatascience.com/scaling-machine-learning-from-zero-to-hero-d63796442526) - will memory be and performance issue? Scaling sorted.
 * Deploy on a VM with code to handle queuing of requests, e.g. [Deepstack](https://deepquestai.com/). Will scaling be an issue?
 * Use one of the cloud providers that host custom models, e.g. [AWS custom labels](https://aws.amazon.com/rekognition/custom-labels-features/). Dont know much about this approach, prefer vendor agnostic.
+* [Use torchserve on sagemaker](https://github.com/aws-samples/amazon-sagemaker-endpoint-deployment-of-fastai-model-with-torchserve)
 
 ## Image preprocessing and augmentation
 Roboflow allows up to 3 types of augmentation per dataset, in addition to basic cropping. If we want to experiment with more augmentations we can checkout https://imgaug.readthedocs.io/en/latest/
