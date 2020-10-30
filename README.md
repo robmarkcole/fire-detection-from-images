@@ -81,10 +81,10 @@ Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) 
 
 ## Cloud deployment
 We want a solution that could also be deployed to the cloud, with minimal changes vs the edge deployment. A couple of options:
-* [Deploy as a lambda function](https://towardsdatascience.com/scaling-machine-learning-from-zero-to-hero-d63796442526) - will memory be and performance issue? Scaling sorted.
-* Deploy on a VM with code to handle queuing of requests, e.g. [Deepstack](https://deepquestai.com/). Will scaling be an issue?
+* [Deploy as a lambda function](https://towardsdatascience.com/scaling-machine-learning-from-zero-to-hero-d63796442526) - will memory be and performance issue? Scaling sorted and should be quite simple but we end up maintaining some custom code (probably flask)
+* Deploy on a VM with custom code to handle queuing of requests, e.g. [Deepstack](https://deepquestai.com/). Will scaling be an issue? Are custom endpoints preferable?
+* [Use torchserve on sagemaker, runs on EC2 instance](https://github.com/aws-samples/amazon-sagemaker-endpoint-deployment-of-fastai-model-with-torchserve). Well documented but AWS specific.
 * Use one of the cloud providers that host custom models, e.g. [AWS custom labels](https://aws.amazon.com/rekognition/custom-labels-features/). Dont know much about this approach, prefer vendor agnostic.
-* [Use torchserve on sagemaker](https://github.com/aws-samples/amazon-sagemaker-endpoint-deployment-of-fastai-model-with-torchserve)
 
 ## Image preprocessing and augmentation
 Roboflow allows up to 3 types of augmentation per dataset, in addition to basic cropping. If we want to experiment with more augmentations we can checkout https://imgaug.readthedocs.io/en/latest/
