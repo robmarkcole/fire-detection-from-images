@@ -1,6 +1,10 @@
 # fire-detection-from-images
 The purpose of this repo is to demonstrate a fire detection neural net that can be deployed to an edge device as well as the cloud. It is to be connected to a camera that might be in a fixed location or on a roving drone e.g [Ring Always Home Cam](https://blog.ring.com/2020/09/24/introducing-ring-always-home-cam-an-innovative-new-approach-to-always-being-home/)
 
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/fire-annotated.jpg" width="500">
+</p>
+
 ## Best results
 **Object detection:** After experimenting with various model architectures I settled on Yolov5 pytorch model owing to its being SOTA (state of the art), relatively fast to train, and the availability of a well documented and easy to use notebook. After a few hours of experimentation I generated a model of `mAP@.5` of 0.657, Precision of 0.6, Recall of 0.7, trained on 1155 images (337 base images + augmentation).
 
