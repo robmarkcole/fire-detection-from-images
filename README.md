@@ -1,5 +1,5 @@
 # fire-detection-from-images
-The purpose of this repo is to demonstrate a fire detection neural net that can be deployed to an edge device as well as the cloud. It is to be connected to a camera that might be in a fixed location or on a roving drone e.g [Ring Always Home Cam](https://blog.ring.com/2020/09/24/introducing-ring-always-home-cam-an-innovative-new-approach-to-always-being-home/)
+The purpose of this repo is to demonstrate a fire detection neural net model. In use this model will place a bounding box around any fire in an image.
 
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/fire-annotated.jpg" width="500">
