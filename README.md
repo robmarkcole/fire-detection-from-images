@@ -108,6 +108,7 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 * `mAP@0.5`: the mean Average Precision or correctness of each label taking into account all labels. `@0.5` sets a threshold for how much of the predicted bounding box overlaps the original annotation, i.e. "50% overlap"
 * `Precision` is the accuracy of the positive predictions `(TP / TP + FP)` or "If you say it's a fire, what percentage of the time is it really a fire?"
 * `Recall` is the true positive rate `(TP / TP + FN)` or "If there's a fire in there, what percentage of the time do you find it?"
+* IceVision returns the COCOMetric, specifically the `AP at IoU=.50:.05:.95 (primary challenge metric)`, from [here](https://cocodataset.org/#detection-eval), typically referred to as the "mean average precision" (mAP)
 
 ## Comments
 * Firenet is a VERY common name for model, do not use
