@@ -84,6 +84,7 @@ Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) 
 * [How to Train a Custom TensorFlow Lite Object Detection Model](https://blog.roboflow.com/how-to-train-a-tensorflow-lite-object-detection-model/) - colab notebook, MobileNetSSDv2, deploy to RPi
 * [How to Train a Custom Mobile Object Detection Model with YOLOv4 Tiny and TensorFlow Lite](https://blog.roboflow.com/how-to-train-a-custom-mobile-object-detection-model/) - train YOLOv4 tiny Darknet and convert to tflite, demo on android, more steps than training straight for tflite
 * [AI for AG: Production machine learning for agriculture](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1) - complete workflow from training to deployment
+* [Pytorch now officially supports RPi]()https://pytorch.org/blog/prototype-features-now-available-apis-for-hardware-accelerated-mobile-and-arm64-builds/
 
 ## Cloud deployment
 We want a solution that could also be deployed to the cloud, with minimal changes vs the edge deployment. A couple of options:
