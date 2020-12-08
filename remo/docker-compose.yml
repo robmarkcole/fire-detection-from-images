@@ -1,0 +1,31 @@
+```
+version: '3.2'
+
+volumes:
+  postgres_data: {}
+
+services:
+  postgres:
+    image: postgres:11-alpine
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=remo
+      - POSTGRES_DB=remo
+      - POSTGRES_PASSWORD=remo
+    ports:
+      - "5432:5432"
+
+  remo:
+    image: rediscoveryio/remo:0.5.7
+    depends_on:
+      - postgres
+    volumes:
+      - ./remo_home:/root/.remo
+    ports:
+      - "8123:8123"
+    links:
+      - postgres
+
+```
