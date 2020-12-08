@@ -1,5 +1,4 @@
-```
-version: '3.2'
+version: "3.2"
 
 volumes:
   postgres_data: {}
@@ -27,5 +26,3 @@ services:
       - "8123:8123"
     links:
       - postgres
-
-```
