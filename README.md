@@ -6,9 +6,9 @@ The purpose of this repo is to demonstrate a fire detection neural net model. In
 </p>
 
 ## Best results
-**Object detection:** After experimenting with various model architectures I settled on Yolov5 pytorch model owing to its being SOTA (state of the art), relatively fast to train, and the availability of a well documented and easy to use notebook. After a few hours of experimentation I generated a model of `mAP@.5` of 0.657, Precision of 0.6, Recall of 0.7, trained on 1155 images (337 base images + augmentation).
+**Object detection:** After experimenting with various model architectures I settled on Yolov5 pytorch model. After a few hours of experimentation I generated a model of `mAP@.5` of 0.657, Precision of 0.6, Recall of 0.7, trained on 1155 images (337 base images + augmentation).
 
-**Classification:** I have yet to train my own model, but 95% accuracy is reported using the ResNet50 with the Monk tensorflow library.
+**Classification:** I have yet to train my own model, but 95% accuracy is reported using ResNet50
 
 ## Motivation and challenges
 Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
@@ -34,9 +34,7 @@ Ideas:
 ## Approach & Tooling
 * Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
 * Develop a lower accuracy but fast model targeted at RPi and mobile, and a high accuracy model targeted at GPU devices like Jetson. Yolo present both options, yolo4 lite for mobile and yolo5 for GPU. Alternatively there is mobilenet and tf-object-detection-api. Higher accuracy GPU model is priority.
-* Use Google Colab for training and [Roboflow](https://app.roboflow.com/) for image dataset curation as allows easy export into common formats e.g. tfrecord. Once we get serious can use sagemaker or google equivalent (Deep Learning VM), and [weights & biases](https://www.wandb.com/)
-* For cloud serving use Amazon SageMaker, e.g. [Serving PyTorch models in production with the Amazon SageMaker native TorchServe integration](https://aws.amazon.com/blogs/machine-learning/serving-pytorch-models-in-production-with-the-amazon-sagemaker-native-torchserve-integration/)
-* [LabelImg for Labeling](https://blog.roboflow.com/labelimg/)
+* Use Google Colab for training
 
 ## Articles & repos
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
