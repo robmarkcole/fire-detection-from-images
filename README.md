@@ -121,3 +121,4 @@ The best performing model can be used by running the demo app created with Gradi
 * `source venv/bin/activate`
 * `pip3 install -r requirements.txt`
 * `python3 demo.py`
+* You are prompted to navigate to [http://127.0.0.1:7860/](http://127.0.0.1:7860/)
