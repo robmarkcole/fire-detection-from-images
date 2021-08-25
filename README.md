@@ -6,7 +6,7 @@ The purpose of this repo is to demonstrate a fire detection neural net model. In
 </p>
 
 ## Best results
-**Object detection:** After experimenting with various model architectures I settled on Yolov5 pytorch model. After a few hours of experimentation I generated a model of `mAP@.5` of 0.657, Precision of 0.6, Recall of 0.7, trained on 1155 images (337 base images + augmentation).
+**Object detection:** After experimenting with various model architectures I settled on [Yolov5](https://github.com/ultralytics/yolov5) pytorch model (see `pytorch/object-detection/yolov5/experiment1/best.pt`). After a few hours of experimentation I generated a model of `mAP@.5` of 0.657, Precision of 0.6, Recall of 0.7, trained on 1155 images (337 base images + augmentation).
 
 **Classification:** I have yet to train my own model, but 95% accuracy is reported using ResNet50
 
@@ -114,3 +114,11 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 
 ## Discussion
 * [Thread I have started on the fast.ai forum](https://forums.fast.ai/t/yolo-v5-implementation-in-fastai2/79738)
+
+## Demo
+The best performing model can be used by running the demo app created with Gradio.
+* `python3 -m venv venv`
+* `source venv/bin/activate`
+* `pip3 install -r requirements.txt`
+* `python3 demo.py`
+* You are prompted to navigate to [http://127.0.0.1:7860/](http://127.0.0.1:7860/)
