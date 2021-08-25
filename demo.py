@@ -6,12 +6,9 @@ import gradio as gr
 import torch
 from PIL import Image
 
-# Images
-torch.hub.download_url_to_file('https://github.com/ultralytics/yolov5/raw/master/data/images/zidane.jpg', 'zidane.jpg')
-torch.hub.download_url_to_file('https://github.com/ultralytics/yolov5/raw/master/data/images/bus.jpg', 'bus.jpg')
-
 # Model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # force_reload=True to update
+# model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # force_reload=True to update
+model = torch.hub.load('/Users/robin/Github/yolov5', 'custom', 'pytorch/object-detection/yolov5/experiment1/best.pt', source='local')  # local repo
 
 
 def yolo(im, size=640):
@@ -33,6 +30,6 @@ article = "<p style='text-align: center'>YOLOv5 is a family of compound-scaled o
           "and export to ONNX, CoreML and TFLite. <a href='https://github.com/ultralytics/yolov5'>Source code</a> |" \
           "<a href='https://apps.apple.com/app/id1452689527'>iOS App</a> | <a href='https://pytorch.org/hub/ultralytics_yolov5'>PyTorch Hub</a></p>"
 
-examples = [['zidane.jpg'], ['bus.jpg']]
+examples = [['images/pan-fire.jpg'], ['images/fire-basket.jpg']]
 gr.Interface(yolo, inputs, outputs, title=title, description=description, article=article, examples=examples).launch(
     debug=True)
