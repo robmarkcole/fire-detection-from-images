@@ -9,10 +9,27 @@
 
 Then commands to use pyodi:
 
-### ground-truth
+## 1. paint-annotations
+Uses the annotation file to annotate images:
+
+```
+pyodi paint-annotations \
+  /Users/robin/Documents/datasets/fireNET_coco/valid/_annotations.coco.json \
+  /Users/robin/Documents/datasets/fireNET_coco/valid \
+  /Users/robin/Documents/datasets/fireNET_coco/valid_annotated
+```
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/annotated_result.jpg" width="800">
+</p>
+
+### 2. ground-truth
 This script can be used to explore the images and bounding boxes that compose an object detection dataset. The shape distribution of the images and bounding boxes and their locations are the key aspects to take in account when setting your training configuration.
 
-* `pyodi ground-truth /Users/robin/Documents/datasets/fireNET_coco/train/_annotations.coco.json`
+```
+pyodi ground-truth /Users/robin/Documents/datasets/fireNET_coco/train/_annotations.coco.json
+```
+
 * Creates 3 plots with plot.ly, bounding box shapes and centers and image shapes.
 * The bounding boxes are well centered and tend towards smalle boxes, around 20% of the width and height of an image
 * The average image shape is approx 280 wide by 180 high
@@ -30,15 +47,10 @@ This script can be used to explore the images and bounding boxes that compose an
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/bounding_box_centers.png" width="800">
 </p>
 
-## paint-annotations
-Uses the annotation file to annotate images
+### 3. train-config
 ```
-pyodi paint-annotations \
-  /Users/robin/Documents/datasets/fireNET_coco/valid/_annotations.coco.json \
-  /Users/robin/Documents/datasets/fireNET_coco/valid \
-  /Users/robin/Documents/datasets/fireNET_coco/valid_annotated
+pyodi train-config generation \
+  /Users/robin/Documents/datasets/fireNET_coco/train/_annotations.coco.json \
+  --input-size [280,180] \
+  --n-ratios 3 --n-scales 3
 ```
-
-<p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/annotated_result.jpg" width="800">
-</p>
