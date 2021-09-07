@@ -17,3 +17,15 @@ This script can be used to explore the images and bounding boxes that compose an
 * The bounding boxes are well centered and tend towards smalle boxes, around 20% of the width and height of an image
 * The average image shape is approx 280 wide by 180 high
 * Note that Roboflow offers similar inspection in `Dataset Health Check`
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/image_shapes.png" width="800">
+</p>
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/bounding_box_shapes.png" width="800">
+</p>
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/bounding_box_centers.png" width="800">
+</p>
