@@ -31,9 +31,14 @@ This script can be used to explore the images and bounding boxes that compose an
 </p>
 
 ## paint-annotations
+Uses the annotation file to annotate images
 ```
 pyodi paint-annotations \
   /Users/robin/Documents/datasets/fireNET_coco/valid/_annotations.coco.json \
   /Users/robin/Documents/datasets/fireNET_coco/valid \
   /Users/robin/Documents/datasets/fireNET_coco/valid_annotated
 ```
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/annotated_result.jpg" width="800">
+</p>
