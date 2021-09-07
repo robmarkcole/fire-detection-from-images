@@ -1,0 +1,1 @@
+I am using the [FireNET](https://github.com/OlafenwaMoses/FireNET) dataset and have uploaded it to Roboflow, from where I can export it with the annotations in whatever format (COCO, XML etc) that I require
