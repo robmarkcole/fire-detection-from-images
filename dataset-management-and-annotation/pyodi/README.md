@@ -19,11 +19,11 @@ This script can be used to explore the images and bounding boxes that compose an
 * Note that Roboflow offers similar inspection in `Dataset Health Check`
 
 <p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/image_shapes.png" width="800">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/image_shapes.png" width="1200">
 </p>
 
 <p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/bounding_box_shapes.png" width="800">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/bounding_box_shapes.png" width="1200">
 </p>
 
 <p align="center">
