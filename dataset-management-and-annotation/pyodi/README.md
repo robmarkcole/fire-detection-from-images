@@ -54,3 +54,11 @@ pyodi train-config generation \
   --input-size [280,180] \
   --n-ratios 3 --n-scales 3
 ```
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/anchor_generation.png" width="1200">
+</p>
+
+<p align="center">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/dataset-management-and-annotation/pyodi/config_evaluation.png" width="1200">
+</p>
