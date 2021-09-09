@@ -23,6 +23,7 @@ There are a couple of significant challenges & open questions:
 * Handling different viewpoints, different camera manufacturers and settings, and different ambient lighting conditions.
 * Since fires are so bright they can often wash out images and cause other optical disturbances, how can this be compensated for?
 * Since we expect the model will have limitations, how do we make the model results interpretable?
+* Fires can be a very wide range of sizes, from an candle flame to engulfing an entire forest - is this a small object & large object problem?
 
 Ideas:
 * Preprocessing images, e.g. to remove background or apply filters
@@ -30,6 +31,7 @@ Ideas:
 * Simulated data, identify any software which can generate realistic fires and add to existing datasets
 * Augmentations to simulate effect of different cameras and exposure settings
 * Identify any relevant guidance/legislation on required accuracy of fire detection techniques
+* Combine RGB + thermal for suppressing false positives? e.g. using https://openmv.io/blogs/news/introducing-the-openmv-cam-pure-thermal or cheaper [grideye](https://shop.pimoroni.com/products/adafruit-amg8833-ir-thermal-camera-breakout) or [melexsis](https://shop.pimoroni.com/products/mlx90640-thermal-camera-breakout?variant=12536948654163)
 
 ## Approach & Tooling
 * Frames will be fed through neural net. On positive detection of fire metrics are extracted. Ignore smoke for MVP. Try various architectures & parameters to establish a 'good' baseline model.
