@@ -6,6 +6,7 @@
 * Article comparing the models available in IceVision -> https://medium.com/geekculture/different-models-for-object-detection-9c5cda7863c1
 
 ## Model comparison
-- yolo5: at 20 epochs COCOMetric 0.307617, overfitting after this, updated 13/5/2021
-- retinanet: proven tricky to train, validation loss jumps around, updated 13/5/2021
-- efficientdet_lite0
+- yolo5: at 100 epochs COCOMetric 0.347636
+- retinanet: 
+- efficientdet_tf_lite0: After 100 epochs have 0.323955
+- faster_rcnn: Plateaus around 0.33
