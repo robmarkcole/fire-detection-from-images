@@ -23,7 +23,7 @@ There are a couple of significant challenges & open questions:
 * Handling different viewpoints, different camera manufacturers and settings, and different ambient lighting conditions.
 * Since fires are so bright they can often wash out images and cause other optical disturbances, how can this be compensated for?
 * Since we expect the model will have limitations, how do we make the model results interpretable?
-* Fires can be a very wide range of sizes, from an candle flame to engulfing an entire forest - is this a small object & large object problem?
+* Fires can be a very wide range of sizes, from an candle flame to engulfing an entire forest - is this a small object & large object problem? Splitting dataset by fire class and training models for each class may give better results? Treat as a semantic segmentation problemn (requires reannotating dataset)?
 
 Ideas:
 * Preprocessing images, e.g. to remove background or apply filters
