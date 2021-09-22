@@ -106,12 +106,12 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 * [Why and How to Implement Random Crop Data Augmentation](https://blog.roboflow.com/why-and-how-to-implement-random-crop-data-augmentation/)
 * [When to Use Grayscale as a Preprocessing Step](https://blog.roboflow.com/when-to-use-grayscale-as-a-preprocessing-step/)
 
-## Metrics
+## ML metrics
+* `Precision` is the accuracy of the predictions, calculated as `precision = TP/(TP+FP)` or "what % of predictions are correct?"
+* `Recall` is the **true positive rate** (TPR), calculated as `recall = TP/(TP+FN)` or "what % of true positives does the model capture?"
+* The `F1 score` (also called the F score or the F measure) is the harmonic mean of precision and recall, calculated as `F1 = 2*((precision * recall)/(precision + recall))`. It conveys the balance between the precision and the recall. [Ref](https://machinelearningmastery.com/classification-accuracy-is-not-enough-more-performance-measures-you-can-use/)
+* The **false positive rate** (FPR), calculated as `FPR = FP/(FP+TN)` is often plotted against recall/TPR in an [ROC curve](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc) which shows how the TPR/FPR tradeoff varies with classification threshold. Lowering the classification threshold returns more true positives, but also more false positives
 * mAP, IoU, precision and recall are all explained well [here](https://github.com/AlexeyAB/darknet#how-to-train-tiny-yolo-to-detect-your-custom-objects) and [here](https://github.com/jshaffer94247/Counting-Fish#Model-Metrics)
-* `Precision` is the accuracy of the positive predictions `(TP / TP + FP)` or "What % of positive identifications of fire are actually correct?"
-* `Recall` is the **true positive rate** (TPR) `(TP / TP + FN)` or "If there's a fire in the image, what % of the time do you indetify it?"
-* The `F1 score` (also called the F score or the F measure) is `2 * ( (precision * recall) / (precision + recall) )`. It conveys the balance between the precision and the recall. [Ref](https://machinelearningmastery.com/classification-accuracy-is-not-enough-more-performance-measures-you-can-use/)
-* The **false positive rate** (FPR) `(FP / FP + TN)` is often plotted against recall/TPR in an [ROC curve](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc) which shows how TPR/FPR vary with classification threshold. Lowering the classification threshold classifies more items as positive, thus increasing both False Positives and True Positives.
 * IceVision returns the COCOMetric, specifically the `AP at IoU=.50:.05:.95 (primary challenge metric)`, from [here](https://cocodataset.org/#detection-eval), typically referred to as the "mean average precision" (mAP)
 * `mAP@0.5`: the mean Average Precision or correctness of each label taking into account all labels. `@0.5` sets a threshold for how much of the predicted bounding box overlaps the original annotation, i.e. "50% overlap"
 
