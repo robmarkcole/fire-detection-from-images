@@ -88,6 +88,7 @@ Our end goal of deployment to an edge device (RPi, jetson nano, android or ios) 
 * [How to Train a Custom Mobile Object Detection Model with YOLOv4 Tiny and TensorFlow Lite](https://blog.roboflow.com/how-to-train-a-custom-mobile-object-detection-model/) - train YOLOv4 tiny Darknet and convert to tflite, demo on android, more steps than training straight for tflite
 * [AI for AG: Production machine learning for agriculture](https://medium.com/pytorch/ai-for-ag-production-machine-learning-for-agriculture-e8cfdb9849a1) - complete workflow from training to deployment
 * [Pytorch now officially supports RPi]()https://pytorch.org/blog/prototype-features-now-available-apis-for-hardware-accelerated-mobile-and-arm64-builds/
+* [Hermes is a Wildfire detection system that utilizes Computer Vision and is accelerated using NVIDIA Deepstream](https://github.com/kn1ghtf1re/Hermes-Deepstream)
 
 ## Cloud deployment
 We want a solution that could also be deployed to the cloud, with minimal changes vs the edge deployment. A couple of options:
@@ -109,7 +110,7 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 ## ML metrics
 * `Precision` is the accuracy of the predictions, calculated as `precision = TP/(TP+FP)` or "what % of predictions are correct?"
 * `Recall` is the **true positive rate** (TPR), calculated as `recall = TP/(TP+FN)` or "what % of true positives does the model capture?"
-* The `F1 score` (also called the F score or the F measure) is the harmonic mean of precision and recall, calculated as `F1 = 2*((precision * recall)/(precision + recall))`. It conveys the balance between the precision and the recall. [Ref](https://machinelearningmastery.com/classification-accuracy-is-not-enough-more-performance-measures-you-can-use/)
+* The `F1 score` (also called the F score or the F measure) is the harmonic mean of precision and recall, calculated as `F1 = 2*(precision * recall)/(precision + recall)`. It conveys the balance between the precision and the recall. [Ref](https://machinelearningmastery.com/classification-accuracy-is-not-enough-more-performance-measures-you-can-use/)
 * The **false positive rate** (FPR), calculated as `FPR = FP/(FP+TN)` is often plotted against recall/TPR in an [ROC curve](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc) which shows how the TPR/FPR tradeoff varies with classification threshold. Lowering the classification threshold returns more true positives, but also more false positives
 * mAP, IoU, precision and recall are all explained well [here](https://github.com/AlexeyAB/darknet#how-to-train-tiny-yolo-to-detect-your-custom-objects) and [here](https://github.com/jshaffer94247/Counting-Fish#Model-Metrics)
 * IceVision returns the COCOMetric, specifically the `AP at IoU=.50:.05:.95 (primary challenge metric)`, from [here](https://cocodataset.org/#detection-eval), typically referred to as the "mean average precision" (mAP)
