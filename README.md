@@ -10,13 +10,15 @@ The purpose of this repo is to demonstrate a fire detection neural net model. In
 
 **Classification:** I have yet to train my own model, but 95% accuracy is reported using ResNet50
 
+**Segmentation:** requires annotation
+
 ## Motivation and challenges
 Traditional smoke detectors work by [detecting the physical presence of smoke particles](https://www.nfpa.org/Public-Education/Staying-safe/Safety-equipment/Smoke-alarms/Ionization-vs-photoelectric). However they are prone to false detections (e.g. from toasters) and do not localise the fire particularly well. In these situations a camera solution could complement a traditional detector, in order to improve response times or to provide additional metrics such as the size and location of a fire. With the location and nature of the fire identified, an automated intervention may be possible, e.g. via a sprinkler system or drone. Also data can be sent to fire services to provide otherwise non-existent situational awareness. Particular locations I am interested in are: kitchens & living rooms, garages and outbuildings, and areas where fires might already be present but spreading outside a desired zone e.g. fire pit.
 
 There are a couple of significant challenges & open questions:
 * For fast edge model what is 'best' architecture? Yolo3 is very popular for commecrial applications and can be implemented in keras or pytorch, baseline [Yolov5](https://github.com/ultralytics/yolov5) as it is currently SOTA and has deployment guide to Jetson. 
 * Can the architecture be optimised since we are detecting only a single class?
-* Baseline object detection, but is there benefit to classifier or using both? Obj models train on mAP and Recall metrics but for our application bounding box accuracy may not be top priority? However classification models work best on a nice shot containing only the target object but in real life fire scenarios the scene will not be as simple as this scenario.
+* Baseline object detection, but is there benefit to classifier or segmentation? Obj models train on mAP and Recall metrics but for our application bounding box accuracy may not be top priority? However classification models work best on a nice shot containing only the target object but in real life fire scenarios the scene will not be as simple as this scenario.
 * Tensorflow + google ecosystem or Pytorch + NVIDIA/MS? Tensorflow suffers from tf1 legacy
 * Is a single 'super' model preferable, or several specialised models? Typical categories of fire include candle flame, indoor/outdoor, vehicle
 * Gathering or locating a comprehensive, representative and balanced training dataset
@@ -55,12 +57,12 @@ Ideas:
 
 ## Datasets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes in pascal voc XML format. Repo contains trained Yolo3 model trained using [imageai](https://github.com/OlafenwaMoses/ImageAI), unknown performance. However small images, 275x183 pixels on average, meaning there are fewer textural features for a network to learn.
-* [Fire Detection from CCTV on Kaggle](https://www.kaggle.com/ritupande/fire-detection-from-cctv) - images and video, images are extracted from video, relatively small dataset. Quite relevant to current task as have videos to test on. Dataset organised for classification task of normal/smoke/fire, no bounding box annotations
-* [cair/Fire-Detection-Image-Dataset](https://github.com/cair/Fire-Detection-Image-Dataset) - This dataset contains normal images and images with fire, and is highly unbalanced to reciprocate real world situations.
+* [Fire Detection from CCTV on Kaggle](https://www.kaggle.com/ritupande/fire-detection-from-cctv) - images and video, images are extracted from video, relatively small dataset with all images only taken from 3-4 videos. Quite relevant to current task as have videos to test on. Dataset organised for classification task of normal/smoke/fire, no bounding box annotations
+* [cair/Fire-Detection-Image-Dataset](https://github.com/cair/Fire-Detection-Image-Dataset) - This dataset contains many normal images and 111 images with fire. Dataset is highly unbalanced to reciprocate real world situations. Images are decent size but not annotated.
 * [mivia Fire Detection Dataset](https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/) - approx. 30 videos
 * [USTC smoke detection](http://smoke.ustc.edu.cn/datasets.htm) - links to various sources that provide videos of smoke
 * fire/not-fire dataset in the pyimagesearch article can be downloaded. Note that there are many images of fire scenes that do not contain actual fire, but burnt out homes for example.
-* [FIRE Dataset on Kaggle](https://www.kaggle.com/phylake1337/fire-dataset) - 755 outdoor fire images and 244 non-fire images. Many glossy images, representative?
+* [FIRE Dataset on Kaggle](https://www.kaggle.com/phylake1337/fire-dataset) - 755 outdoor fire images and 244 non-fire images. Images are decent size but not annotated
 * [Fire Image Data Set for Dunnings 2018 study](https://collections.durham.ac.uk/files/r2d217qp536#.X2rv1ZNKidb) - PNG still image set
 * [Fire Superpixel Image Data Set for Samarth 2019 study](https://collections.durham.ac.uk/files/r10r967374q#.X2rv1pNKidb) - PNG still image set
 * [Wildfire Smoke Dataset](https://public.roboflow.com/object-detection/wildfire-smoke) - 737 annotated (bounding boxed) images
