@@ -69,6 +69,7 @@ Ideas:
 * [Wildfire Smoke Dataset](https://public.roboflow.com/object-detection/wildfire-smoke) - 737 annotated (bounding boxed) images
 * [Dataset by jackfrost1411](https://github.com/jackfrost1411/fire-detection) -> several hundred images sorted into fire/neutral for classification task. No bounding box annotations
 * [fire-and-smoke-dataset on Kaggle](https://www.kaggle.com/dataclusterlabs/fire-and-smoke-dataset) -> 7000+ images, consisting of 691 flame only images, 3721 smoke only images, and 4207 fire {flame & smoke} images
+* [Domestic-Fire-and-Smoke-Dataset](https://github.com/datacluster-labs/Domestic-Fire-and-Smoke-Dataset) -> Approx. 5000 unique images, 2-class (fire and smoke), bounding box annotation, COCO, PASCAL VOC and YOLO formats
 
 ## Fire safety references
 * Locate reference covering the different kinds of fires in the home, common scenarios & interventions
