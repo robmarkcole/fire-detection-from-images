@@ -54,6 +54,7 @@ Ideas:
 * [Smoke-Detection-using-Tensorflow 2.2](https://github.com/abg3/Smoke-Detection-using-Tensorflow-2.2) - EfficientDet-D0, 733 annotated smoke images, mentioned on the [Roboflow blog](https://blog.roboflow.com/fighting-wildfires/)
 * [Aerial Imagery dataset for fire detection: classification and segmentation using Unmanned Aerial Vehicle (UAV)](https://github.com/AlirezaShamsoshoara/Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle) - binary classifier, 76% accuracy on test set
 * [A Forest Fire Detection System Based on Ensemble Learning](https://www.mdpi.com/1999-4907/12/2/217) ->  Firstly, two individual learners Yolov5 and EfficientDet are integrated to accomplish fire detection process. Secondly, another individual learner EfficientNet is responsible for learning global information to avoid false positives
+* [Fire Alert System with Multi-Label Classification Model Explained by GradCAM](https://medium.com/@wongsirikuln/fire-alert-system-with-multi-label-classification-model-explained-by-gradcam-bc18affe178c) -> use CAM to visualize which region of an image is responsible for a prediction, and uses synthetic data to fill in lacking classes to make class distribution balanced
 
 ## Datasets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes in pascal voc XML format. Repo contains trained Yolo3 model trained using [imageai](https://github.com/OlafenwaMoses/ImageAI), unknown performance. However small images, 275x183 pixels on average, meaning there are fewer textural features for a network to learn.
@@ -67,6 +68,7 @@ Ideas:
 * [Fire Superpixel Image Data Set for Samarth 2019 study](https://collections.durham.ac.uk/files/r10r967374q#.X2rv1pNKidb) - PNG still image set
 * [Wildfire Smoke Dataset](https://public.roboflow.com/object-detection/wildfire-smoke) - 737 annotated (bounding boxed) images
 * [Dataset by jackfrost1411](https://github.com/jackfrost1411/fire-detection) -> several hundred images sorted into fire/neutral for classification task. No bounding box annotations
+* [fire-and-smoke-dataset on Kaggle](https://www.kaggle.com/dataclusterlabs/fire-and-smoke-dataset) -> 7000+ images, consisting of 691 flame only images, 3721 smoke only images, and 4207 fire {flame & smoke} images
 
 ## Fire safety references
 * Locate reference covering the different kinds of fires in the home, common scenarios & interventions
