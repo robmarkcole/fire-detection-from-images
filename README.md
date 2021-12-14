@@ -135,5 +135,5 @@ The best performing model can be used by running the demo app that created with 
 * You are prompted to navigate to [http://127.0.0.1:7860/](http://127.0.0.1:7860/)
 
 <p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/demo.png" width="800">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/demo.png" width="1100">
 </p>
