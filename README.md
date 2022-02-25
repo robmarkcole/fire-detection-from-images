@@ -41,6 +41,7 @@ Ideas:
 * Use Google Colab for training
 
 ## Articles & repos
+* [Yolov5-Fire-Detection](https://github.com/spacewalk01/Yolov5-Fire-Detection) -> 
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
 * [Fire Detection from scratch using YOLOv3](https://medium.com/@b117020/fire-detection-using-neural-networks-4d52c5cd55c5) - discusses annotation using LabelImg, using Google drive and Colab, deployment via Heroku and viz using Streamlit [here](https://fireapp-aicoe.herokuapp.com/). Work by Devdarshan Mishra
 * [fire-detect-yolov4](https://github.com/gengyanlei/fire-detect-yolov4) - training of Yolo v4 model
@@ -71,6 +72,7 @@ Ideas:
 * [Dataset by jackfrost1411](https://github.com/jackfrost1411/fire-detection) -> several hundred images sorted into fire/neutral for classification task. No bounding box annotations
 * [fire-and-smoke-dataset on Kaggle](https://www.kaggle.com/dataclusterlabs/fire-and-smoke-dataset) -> 7000+ images, consisting of 691 flame only images, 3721 smoke only images, and 4207 fire {flame & smoke} images
 * [Domestic-Fire-and-Smoke-Dataset](https://github.com/datacluster-labs/Domestic-Fire-and-Smoke-Dataset) -> Approx. 5000 unique images, 2-class (fire and smoke), bounding box annotation, COCO, PASCAL VOC and YOLO formats
+* [kaggle fire-and-gun-dataset](https://www.kaggle.com/atulyakumar98/fire-and-gun-dataset)
 
 ## Fire safety references
 * Locate reference covering the different kinds of fires in the home, common scenarios & interventions
