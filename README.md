@@ -2,7 +2,7 @@
 The purpose of this repo is to demonstrate a fire detection neural net model. In use this model will place a bounding box around any fire in an image.
 
 <p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/fire-annotated.jpg" width="350">
+<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/fire-annotated.jpg" width="450">
 </p>
 
 ## Best results
@@ -41,7 +41,7 @@ Ideas:
 * Use Google Colab for training
 
 ## Articles & repos
-* [Yolov5-Fire-Detection](https://github.com/spacewalk01/Yolov5-Fire-Detection) -> 
+* [Yolov5-Fire-Detection](https://github.com/spacewalk01/Yolov5-Fire-Detection) -> well documented model trained on kaggle data
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
 * [Fire Detection from scratch using YOLOv3](https://medium.com/@b117020/fire-detection-using-neural-networks-4d52c5cd55c5) - discusses annotation using LabelImg, using Google drive and Colab, deployment via Heroku and viz using Streamlit [here](https://fireapp-aicoe.herokuapp.com/). Work by Devdarshan Mishra
 * [fire-detect-yolov4](https://github.com/gengyanlei/fire-detect-yolov4) - training of Yolo v4 model
