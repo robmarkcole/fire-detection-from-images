@@ -57,6 +57,7 @@ Ideas:
 * [A Forest Fire Detection System Based on Ensemble Learning](https://www.mdpi.com/1999-4907/12/2/217) ->  Firstly, two individual learners Yolov5 and EfficientDet are integrated to accomplish fire detection process. Secondly, another individual learner EfficientNet is responsible for learning global information to avoid false positives
 * [Fire Alert System with Multi-Label Classification Model Explained by GradCAM](https://medium.com/@wongsirikuln/fire-alert-system-with-multi-label-classification-model-explained-by-gradcam-bc18affe178c) -> use CAM to visualize which region of an image is responsible for a prediction, and uses synthetic data to fill in lacking classes to make class distribution balanced
 * Training [fast.ai model](https://github.com/mldurga/projects/blob/master/Fire_smoke_detector.ipynb) and deploying via [gradio app](https://huggingface.co/spaces/durgaamma2005/fire_detector)
+* [Deepfire](https://github.com/devlyn37/Deepfire) -> perform forest fire recognition on UAV using ResNet50 and EfficientNetB7
 
 ## Datasets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes in pascal voc XML format. Repo contains trained Yolo3 model trained using [imageai](https://github.com/OlafenwaMoses/ImageAI), unknown performance. However small images, 275x183 pixels on average, meaning there are fewer textural features for a network to learn.
