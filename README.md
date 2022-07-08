@@ -41,6 +41,7 @@ Ideas:
 * Use Google Colab for training
 
 ## Articles & repos
+* [Fire_Detection](https://github.com/nikhil0g/Fire_Detection) -> Fire and smoke detection system using Jetson nano & Yolov5 with image dataset from gettyimages
 * [Yolov5-Fire-Detection](https://github.com/spacewalk01/Yolov5-Fire-Detection) -> well documented model trained on kaggle data
 * [Fire and smoke detection with Keras and Deep Learning by pyimagesearch](https://www.pyimagesearch.com/2019/11/18/fire-and-smoke-detection-with-keras-and-deep-learning/) - dataset collected by scraping Google images (provides link to dataset with  1315 fire images), binary Fire/Non-fire classification with tf2 & keras sequential CNN, achieve 92% accuracy, concludes that better datasets are required
 * [Fire Detection from scratch using YOLOv3](https://medium.com/@b117020/fire-detection-using-neural-networks-4d52c5cd55c5) - discusses annotation using LabelImg, using Google drive and Colab, deployment via Heroku and viz using Streamlit [here](https://fireapp-aicoe.herokuapp.com/). Work by Devdarshan Mishra
