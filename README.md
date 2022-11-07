@@ -81,6 +81,7 @@ Ideas:
 * [Domestic-Fire-and-Smoke-Dataset](https://github.com/datacluster-labs/Domestic-Fire-and-Smoke-Dataset) -> Approx. 5000 unique images, 2-class (fire and smoke), bounding box annotation, COCO, PASCAL VOC and YOLO formats
 * [kaggle fire-and-gun-dataset](https://www.kaggle.com/atulyakumar98/fire-and-gun-dataset)
 * [Wildfire-Detection](https://github.com/PerceptiLabs/Wildfire-Detection) -> dataset by PerceptiLabs, 250x250-pixel images depicting normal scenes and those containing fires. With [article](https://blog.perceptilabs.com/use-case-wildfire-detection/). It is [this dataset from kaggle](https://www.kaggle.com/datasets/brsdincer/wildfire-detection-image-data)
+* [DFireDataset](https://github.com/gaiasd/DFireDataset) -> an image data set for fire and smoke detection
 
 ## Fire safety references
 * Locate reference covering the different kinds of fires in the home, common scenarios & interventions
