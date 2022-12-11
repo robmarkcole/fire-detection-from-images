@@ -2,7 +2,7 @@
 The purpose of this repo is to demonstrate a fire detection neural net model. In use this model will place a bounding box around any fire in an image.
 
 <p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/fire-annotated.jpg" width="450">
+<img src="images/fire-annotated.jpg" width="450">
 </p>
 
 ## Best results
@@ -140,8 +140,8 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 * [Thread I have started on the fast.ai forum](https://forums.fast.ai/t/yolo-v5-implementation-in-fastai2/79738)
 
 ## Demo
-The best performing model can be used by running the demo app that created with [Gradio](https://gradio.app/). See the `demo` directory
+The best performing model can be used by running the demo app that created with [Gradio](https://gradio.app/). See the `demo` directory or try online at [huggingface.co](https://huggingface.co/spaces/robmarkcole/fire-detection-from-images)
 
 <p align="center">
-<img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/demo.png" width="1100">
+<img src="images/demo.png" width="1100">
 </p>
