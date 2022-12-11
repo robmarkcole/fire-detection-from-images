@@ -140,12 +140,7 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 * [Thread I have started on the fast.ai forum](https://forums.fast.ai/t/yolo-v5-implementation-in-fastai2/79738)
 
 ## Demo
-The best performing model can be used by running the demo app that created with [Gradio](https://gradio.app/). Note you must have the yolov5 repo cloned locally (`git clone https://github.com/ultralytics/yolov5`) and the path to it
-* `python3 -m venv venv`
-* `source venv/bin/activate`
-* `pip3 install -r requirements.txt`
-* `python3 demo.py`
-* You are prompted to navigate to [http://127.0.0.1:7860/](http://127.0.0.1:7860/)
+The best performing model can be used by running the demo app that created with [Gradio](https://gradio.app/). See the `demo` directory
 
 <p align="center">
 <img src="https://github.com/robmarkcole/fire-detection-from-images/blob/master/images/demo.png" width="1100">
