@@ -13,8 +13,8 @@ def yolo(im, size=640):
     g = (size / max(im.size))  # gain
     im = im.resize((int(x * g) for x in im.size), Image.ANTIALIAS)  # resize
     results = model(im)  # inference
-    results.render()  # updates results.imgs with boxes and labels
-    return Image.fromarray(results.imgs[0])
+    results.render()  # updates results.ims with boxes and labels
+    return Image.fromarray(results.ims[0])
 
 
 inputs = gr.inputs.Image(type='pil', label="Original Image")
