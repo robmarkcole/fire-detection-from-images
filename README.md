@@ -64,6 +64,7 @@ Ideas:
 * [Deepfire](https://github.com/devlyn37/Deepfire) -> perform forest fire recognition on UAV using ResNet50 and EfficientNetB7
 * [Wildfire-Smoke-Detection](https://github.com/JasonManesis/Wildfire-Smoke-Detection) -> Convolutional neural network model based on the architecture of the Faster-RCNN for wildfire smoke detection
 * [FireNet-LightWeight-Network-for-Fire-Detection](https://github.com/arpit-jadon/FireNet-LightWeight-Network-for-Fire-Detection) -> A Specialized Lightweight Fire & Smoke Detection Model for Real-Time IoT Applications with ArXiv paper
+* [wildfire-smoke-detection-research](https://github.com/aiformankind/wildfire-smoke-detection-research) -> early wildfire smoke detection, with [paper](https://arxiv.org/abs/2301.05070)
 
 ## Datasets
 * [FireNET](https://github.com/OlafenwaMoses/FireNET) - approx. 500 fire images with bounding boxes in pascal voc XML format. Repo contains trained Yolo3 model trained using [imageai](https://github.com/OlafenwaMoses/ImageAI), unknown performance. However small images, 275x183 pixels on average, meaning there are fewer textural features for a network to learn.
