@@ -141,7 +141,7 @@ Roboflow allows up to 3 types of augmentation per dataset, in addition to basic 
 * [Thread I have started on the fast.ai forum](https://forums.fast.ai/t/yolo-v5-implementation-in-fastai2/79738)
 
 ## Demo
-The best performing model can be used by running the demo app that created with [Gradio](https://gradio.app/). See the `demo` directory or try online at [huggingface.co](https://huggingface.co/spaces/robmarkcole/fire-detection-from-images)
+The best performing model can be used by running the demo app that created with [Gradio](https://gradio.app/). See the `demo` directory
 
 <p align="center">
 <img src="images/demo.png" width="1100">
